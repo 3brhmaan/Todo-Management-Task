@@ -18,7 +18,7 @@
     └── Todo.Client/       # Static HTML/CSS/JS
         ├── index.html
         ├── style.css
-        └── script.js
+        └── index.js
 
 ## 🛠 Setup Guide
 
