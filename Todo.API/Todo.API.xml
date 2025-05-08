@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Todo.API</name>
+    </assembly>
+    <members>
+        <member name="M:Todo.API.Controllers.TodoController.GetAllTodo(Todo.Core.RequestOptions.RequestParameter)">
+            <summary>
+            Retrieves all todo items
+            </summary>
+            <returns>List of todo items</returns>
+            <response code="200">Returns the list of todos</response>
+        </member>
+        <member name="M:Todo.API.Controllers.TodoController.GetTodoById(System.Guid)">
+            <summary>
+            Retrieves a specific todo item by ID
+            </summary>
+            <param name="id">The ID of the todo item</param>
+            <returns>The requested todo item</returns>
+            <response code="200">Returns the requested todo item</response>
+            <response code="404">If the todo item is not found</response>
+        </member>
+        <member name="M:Todo.API.Controllers.TodoController.CreateTodo(Todo.Service.DataTransferObjects.TodoForCreatinDto)">
+            <summary>
+            Creates a new todo item
+            </summary>
+            <param name="todoForCreating">The todo item to create</param>
+            <returns>The newly created todo item</returns>
+            <response code="201">Returns the newly created todo item</response>
+            <response code="400">If the request data is invalid</response>
+        </member>
+        <member name="M:Todo.API.Controllers.TodoController.UpdateTodo(Todo.Service.DataTransferObjects.TodoForUpdatingDto,System.Guid)">
+            <summary>
+            Updates an existing todo item
+            </summary>
+            <param name="id">The ID of the todo item to update</param>
+            <param name="todoForUpdating">The updated todo data</param>
+            <returns>No content</returns>
+            <response code="204">If the update was successful</response>
+            <response code="400">If the request data is invalid</response>
+            <response code="404">If the todo item is not found</response>
+        </member>
+        <member name="M:Todo.API.Controllers.TodoController.PartialUpdateTodo(Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{Todo.Core.Entities.Todo},System.Guid)">
+            <summary>
+            Partially updates a todo item
+            </summary>
+            <param name="id">The ID of the todo item to update</param>
+            <param name="patchDocument">JSON Patch document containing the operations to perform</param>
+            <returns>No content</returns>
+            <response code="204">If the update was successful</response>
+            <response code="400">If the patch document is invalid</response>
+            <response code="404">If the todo item is not found</response>
+        </member>
+        <member name="M:Todo.API.Controllers.TodoController.DeleteTodo(System.Guid)">
+            <summary>
+            Deletes a todo item
+            </summary>
+            <param name="id">The ID of the todo item to delete</param>
+            <returns>No content</returns>
+            <response code="204">If the deletion was successful</response>
+            <response code="404">If the todo item is not found</response>
+        </member>
+    </members>
+</doc>
